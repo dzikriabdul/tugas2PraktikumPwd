@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Mahasiswa</title>
+</head>
+<body>
+  <h2 align="center"><b>Form Mahasiswa</b></h2>
+
+  <form align="center">
+    <!-- Data Mahasiswa -->
+    <fieldset width="500" style="width: 500px; display: inline-block; text-align: left;">
+      <legend><b>Data Mahasiswa</b></legend>
+      <table>
+        <tr>
+          <td>Nama</td>
+          <td>:</td>
+          <td><input type="text" name="nama"></td>
+        </tr>
+        <tr>
+          <td>NPM</td>
+          <td>:</td>
+          <td><input type="text" name="npm"></td>
+        </tr>
+        <tr>
+          <td>Kelas</td>
+          <td>:</td>
+          <td>
+            <select>
+              <option>-</option>
+              <option>IF-1</option>
+              <option>IF-2</option>
+              <option>IF-3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="jk"> Pria
+            <input type="radio" name="jk"> Wanita
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <br><br>
+
+    <!-- Tempat Tinggal -->
+    <fieldset width="500" style="width: 500px; display: inline-block; text-align: left;">
+      <legend><b>Tempat Tinggal Mahasiswa</b></legend>
+      <table>
+        <tr valign="top">
+          <td>Alamat</td>
+          <td>:</td>
+          <td><textarea rows="3" cols="25"></textarea></td>
+        </tr>
+        <tr>
+          <td>Kecamatan</td>
+          <td>:</td>
+          <td><input type="text" name="kecamatan"></td>
+        </tr>
+        <tr>
+          <td>Kabupaten/Kotamadya</td>
+          <td>:</td>
+          <td><input type="text" name="kabupaten"></td>
+        </tr>
+        <tr>
+          <td>Provinsi</td>
+          <td>:</td>
+          <td><input type="text" name="provinsi"></td>
+        </tr>
+        <tr>
+          <td>Kode Pos</td>
+          <td>:</td>
+          <td><input type="text" name="kodepos"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <br><br>
+
+    <!-- Lain-lainnya -->
+    <fieldset width="500" style="width: 500px; display: inline-block; text-align: left;">
+      <legend><b>Lain-lainnya</b></legend>
+      <table>
+        <tr valign="top">
+          <td>Bahasa Pemrograman</td>
+          <td>:</td>
+          <td>
+            <input type="checkbox"> C / C++
+            <input type="checkbox"> Go Lang
+            <input type="checkbox"> Python
+            <input type="checkbox"> Lainnya <br>
+            <input type="checkbox"> PHP
+            <input type="checkbox"> Javascript
+            <input type="checkbox"> Ruby
+          </td>
+        </tr>
+        <tr valign="top">
+          <td>Kegiatan</td>
+          <td>:</td>
+          <td>
+            <input type="checkbox"> Organisasi Kemahasiswaan
+            <input type="checkbox"> Bidang Olahraga
+            <input type="checkbox"> Lainnya <br>
+            <input type="checkbox"> Organisasi di Luar Kampus
+            <input type="checkbox"> Bidang Seni
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <br><br>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
