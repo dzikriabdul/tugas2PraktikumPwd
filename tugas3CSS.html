@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Layout 3 Halaman</title>
+
+    <style>
+   
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Times New Roman;
+            background-color: #ecf0f1;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 10px 20px;
+        }
+
+        .logo img{
+            height: 50px;
+	    width: auto;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+	    gap: 20px;
+        }
+
+        .menu a:hover, .menu a.active {
+            background-color: #1abc9c;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        article, aside {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            section {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            .menu a {
+                margin: 5px 0;
+            }
+        }
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Website pribadi saya</h1>
+    </header>
+
+    <nav>
+    <div class="logo">
+        <img src="persib.png" alt="Logo Website">
+    </div>
+    <div class="menu">
+        <a href="#" class="active" onclick="showPage('home', this)">Beranda</a>
+        <a href="#" onclick="showPage('about', this)">Tentang</a>
+        <a href="#" onclick="showPage('contact', this)">Kontak</a>
+    </div>
+</nav>
+
+        <div id="home" class="page active">
+        <section>
+            <article>
+                <h2>PERSIB BANDUNG</h2>
+                <p>
+Persatuan Sepak Bola Indonesia Bandung (atau disingkat Persib) adalah klub sepak bola profesional Indonesia yang berbasis di Kota Bandung, Jawa Barat. Klub ini didirikan pada 5 Januari 1919 dengan nama Bandoeng Inlandsche Voetbal Bond (BIVB).[2] Saat ini Persib bermain di Liga Super Indonesia, julukan terkenal klub ini Maung Bandung dan Pangeran Biru.
+
+Persib merupakan salah satu klub Perserikatan yang ikut serta dalam membentuk federasi sepak bola Indonesia yaitu PSSI. Klub ini juga termasuk dalam klub dengan keuangan yang paling stabil di Liga 1 Indonesia dan termasuk daftar klub terkaya di Asia Tenggara.[3] Bersamaan dengan Persija Jakarta dan PSM Makassar, klub ini juga adalah klub yang belum pernah ter-degradasi di sejarah persepak bolaan Indonesia.
+              </p>
+            </article>
+            <aside>
+                <h3>Info Samping</h3>
+                <p>
+                    Bagian ini bisa berisi pengumuman, tautan penting, atau konten tambahan lainnya.
+                </p>
+            </aside>
+        </section>
+    </div>
+
+   
+    <div id="about" class="page">
+        <section>
+            <article>
+                <h2>Tentang Saya</h2>
+                <p>
+                    Halo! Nama saya <b>Muhammad Dzikri Abdul Muti</b>. Saya sedang belajar membuat halaman HTML dan CSS.
+                </p>
+            </article>
+            <aside>
+                <h3>Hobi</h3>
+                <ul>
+                    <li> Ngoding</li>
+                    <li> Desain UI/UX</li>
+                    <li> Nonton Persib</li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    <div id="contact" class="page">
+        <section>
+            <article>
+                <h2>Hubungi Saya</h2>
+                <p>Silakan isi form di bawah ini untuk menghubungi saya.</p>
+
+                <form>
+                    <label>Nama:</label><br>
+                    <input type="text" style="width:100%; padding:8px; margin:5px 0;"><br>
+
+                    <label>Email:</label><br>
+                    <input type="email" style="width:100%; padding:8px; margin:5px 0;"><br>
+
+                    <label>Pesan:</label><br>
+                    <textarea style="width:100%; height:100px; padding:8px; margin:5px 0;"></textarea><br>
+
+                    <button type="submit" style="background:#1abc9c; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">
+                        Kirim
+                    </button>
+                </form>
+            </article>
+            <aside>
+                <h3>Kontak Langsung</h3>
+                <p>Email: muhammaddzikriabdul@email.com</p>
+                <p>Instagram: @dzkriabd</p>
+            </aside>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Praktikum Web Dasar - Dibuat oleh M DZIKRI ABDUL MUTI</p>
+    </footer>
+
+    <script>
+        function showPage(pageId, linkElement) {
+            // sembunyikan semua halaman
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            // tampilkan halaman yang dipilih
+            document.getElementById(pageId).classList.add('active');
+
+            // ubah tampilan menu aktif
+            document.querySelectorAll('.menu a').forEach(a => a.classList.remove('active'));
+            linkElement.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
