@@ -185,12 +185,12 @@ Persib merupakan salah satu klub Perserikatan yang ikut serta dalam membentuk fe
 
     <script>
         function showPage(pageId, linkElement) {
-            // sembunyikan semua halaman
+            
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            // tampilkan halaman yang dipilih
+            
             document.getElementById(pageId).classList.add('active');
 
-            // ubah tampilan menu aktif
+    
             document.querySelectorAll('.menu a').forEach(a => a.classList.remove('active'));
             linkElement.classList.add('active');
         }
@@ -198,3 +198,4 @@ Persib merupakan salah satu klub Perserikatan yang ikut serta dalam membentuk fe
 
 </body>
 </html>
+
