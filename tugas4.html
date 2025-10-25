@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tugas 4</title>
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium';
+      line-height: 1.4;
+      padding: 20px;
+    }
+
+    
+    #btnTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #6e666670;
+      color: #000000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none; 
+    }
+
+    #btnTop:hover {
+      opacity: 100;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Halaman</h1>
+  <p>Scroll ke bawah untuk melihat tombol muncul.</p>
+
+  <!-- Konten panjang -->
+  <div>
+    <p>scroll ke bawah</p>
+    <p>Ke bawah terussss</p>
+    
+    <p style="height:2000px;"></p>
+  </div>
+
+  <!-- Tombol ke atas -->
+  <button id="btnTop">↑ kembali ke atas</button>
+
+  <script>
+    let btn = document.getElementById("btnTop");
+
+    window.onscroll = function() {
+      if (window.scrollY > 500) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    btn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+
+</body>
+</html>
