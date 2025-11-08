@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>show dan hide Password</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <label>Password:</label><br>
+  <input type="password" id="password" placeholder="Masukkan password"><br><br>
+  <input type="checkbox" id="show"> Tampilkan Password
+
+  <script>
+    $(document).ready(function(){
+      $('#show').click(function(){
+        if ($(this).is(':checked')) {
+          $('#password').attr('type', 'text');
+        } else {
+          $('#password').attr('type', 'password');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
